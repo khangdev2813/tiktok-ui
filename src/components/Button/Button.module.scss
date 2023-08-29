@@ -2,11 +2,12 @@
     display: block;
     font-size: 1.6rem;
     font-weight: 700;
-    padding: 14px 18px;
+    padding: 16px 14px;
     border-radius: 4px;
     min-width: 110px;
-
+    line-height: 1px;
     cursor: pointer;
+    color: #000;
     background-color: #fff;
     border: 1px solid transparent;
     border-radius: 4px;
@@ -49,6 +50,11 @@
     &:hover {
         text-decoration: underline;
     }
+}
+
+.icon {
+    display: inline-block;
+    width: 20px;
 }
 
 .small {

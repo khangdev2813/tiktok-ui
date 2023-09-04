@@ -14,9 +14,8 @@
     height: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 0 var(--default-layout-horizontal-space);
     align-items: center;
-    padding-right: 24px;
-    padding-left: 16px;
 }
 
 .logo {
@@ -100,4 +99,19 @@
 .more-btn {
     font-size: 2rem;
     margin-left: 24px;
+    cursor: pointer;
+}
+
+.action-btn {
+    background-color: transparent;
+    font-size: 2rem;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+.user-avatar {
+    margin-left: 12px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
 }

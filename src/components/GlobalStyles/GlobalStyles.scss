@@ -6,6 +6,7 @@
     // Default Layout
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
+    --default-layout-horizontal-space: 24px;
     --black: #000;
     --text: #3333;
 }
@@ -35,4 +36,17 @@ input,
 a[href] {
     // color: var(--text);
     text-decoration: none;
+}
+
+body {
+    .tippy-box {
+        background-color: rgba(84, 84, 84, 0.92);
+        border-radius: 8px;
+        font-size: 1.8rem;
+        line-height: 22px;
+        font-weight: 600;
+    }
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
 }

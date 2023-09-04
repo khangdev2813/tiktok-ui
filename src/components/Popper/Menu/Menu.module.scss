@@ -10,3 +10,32 @@
 .menu-popper {
     padding: 8px 0;
 }
+
+.menu-item {
+    height: 46px;
+    line-height: 1.8rem;
+    font-weight: 600;
+    &.separate {
+        border-top: 1px solid #7a7575;
+    }
+}
+
+//Header
+.header {
+    position: relative;
+    height: 50px;
+    margin-top: -8px;
+}
+
+.back-btn {
+    height: 100%;
+    width: 50px;
+    background-color: transparent;
+}
+
+.header-title {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

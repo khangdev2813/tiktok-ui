@@ -27,6 +27,8 @@ import AccountItem from 'src/components/AccoutItem';
 import Button from 'src/components/Button';
 import Menu from 'src/components/Popper/Menu';
 import 'tippy.js/dist/tippy.css';
+import { Messageicon } from 'src/components/Icon';
+import Image from 'src/components/Image';
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -144,7 +146,7 @@ function Header() {
                             </Tippy>
                             <Tippy placement="bottom" content="Messages">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faMessage} />
+                                    <Messageicon width="2.4rem" height="2.4rem" />
                                 </button>
                             </Tippy>
                         </>
@@ -158,7 +160,7 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
                                 src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tiktok-obj/1663152791024641.jpeg?x-expires=1693908000&x-signature=T0OrzSj%2Fxlbqn1jqOegWErIiVSI%3D"
                                 alt="Nguyen Van A"

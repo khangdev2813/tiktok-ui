@@ -5,9 +5,9 @@ import classNames from 'classnames';
 const cx = classNames.bind(styles);
 
 const Image = forwardRef(({ src, className, ...props }, ref) => {
-    console.log(src);
     return (
         <img
+            alt="hah"
             className={cx('wrapper', className)}
             ref={ref}
             src={

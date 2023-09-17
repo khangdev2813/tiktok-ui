@@ -16,6 +16,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import Tippy from '@tippyjs/react';
+import routesConfig from 'src/config/routes';
 
 import Button from 'src/components/Button';
 import Menu from 'src/components/Popper/Menu';
@@ -25,6 +26,7 @@ import Image from 'src/components/Image';
 import { MailBoxIcon } from 'src/components/Icon/MailBoxIcon';
 import Search from '../Search';
 import { faOptinMonster } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -91,9 +93,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <div className={cx('logo')}>
+                <Link to={routesConfig.home} className={cx('logo')}>
                     <img src={images.logo} alt="" />
-                </div>
+                </Link>
 
                 <Search />
 

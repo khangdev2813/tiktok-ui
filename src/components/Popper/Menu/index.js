@@ -11,7 +11,7 @@ const cx = classNames.bind(styles);
 
 const def = () => {};
 
-function Menu({ items = [], children, onChange = def }) {
+function Menu({ items = [], hideOnClick = false, children, onChange = def }) {
     const [history, setHistory] = useState([{ data: items }]);
     const current = history[history.length - 1];
     const renderItems = () => {
@@ -35,6 +35,7 @@ function Menu({ items = [], children, onChange = def }) {
 
     return (
         <Tippy
+            hideOnClick={hideOnClick}
             interactive
             delay={[0, 500]}
             placement="bottom-end"

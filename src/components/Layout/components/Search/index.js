@@ -42,6 +42,15 @@ function Search() {
         setShowResult(false);
     };
 
+    const handleChange = (e) => {
+        const searchValue = e.target.value;
+        if (!searchValue.startsWith(' ')) setSearchValue(searchValue);
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    };
+
     return (
         <HeadLessTippy
             interactive="true"
@@ -64,7 +73,7 @@ function Search() {
                     value={searchValue}
                     placeholder="Input acccount or videos"
                     spellCheck="false"
-                    onChange={(e) => setSearchValue(e.target.value)}
+                    onChange={handleChange}
                     onFocus={() => setShowResult(true)}
                 />
 
@@ -86,7 +95,7 @@ function Search() {
                     </button>
                 )}
 
-                <button className={cx('search-btn')}>
+                <button className={cx('search-btn')} onMouseDown={handleSubmit}>
                     <FontAwesomeIcon icon={faSearch} />
                 </button>
             </div>
